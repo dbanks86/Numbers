@@ -23,5 +23,15 @@ namespace Numbers
 
             return a;
         }
+
+        public int FibonacciRecursion(int n)
+        {
+            if (n < 0) throw new InvalidOperationException("Number must be greater than zero");
+
+            if (n == 0) return 0;  
+            if (n == 1) return 1;
+
+            return FibonacciRecursion(n - 1) + FibonacciRecursion(n - 2);
+        }
     }
 }
