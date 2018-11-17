@@ -52,6 +52,7 @@
     <Compile Include="FibonacciLoopTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FibonacciRecursionTests.cs" />
+    <Compile Include="IsPrimeTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
