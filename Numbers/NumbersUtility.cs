@@ -6,7 +6,7 @@ namespace Numbers
     {
         public int FibonacciLoop(int n)
         {
-            if (n < 0) throw new InvalidOperationException("Number must be greater than zero");
+            if (n < 0) throw new InvalidOperationException(Constants.EXCEPTION_MESSAGE_LESS_THAN_ZERO);
 
             if (n == 0) return 0;
             if (n == 1) return 1;
@@ -26,7 +26,7 @@ namespace Numbers
 
         public int FibonacciRecursion(int n)
         {
-            if (n < 0) throw new InvalidOperationException("Number must be greater than zero");
+            if (n < 0) throw new InvalidOperationException(Constants.EXCEPTION_MESSAGE_LESS_THAN_ZERO);
 
             if (n == 0) return 0;  
             if (n == 1) return 1;
@@ -36,7 +36,7 @@ namespace Numbers
 
         public bool IsPrime(int number)
         {
-            if (number < 0) throw new InvalidOperationException("Number must be positive.");
+            if (number < 0) throw new InvalidOperationException(Constants.EXCEPTION_MESSAGE_LESS_THAN_ZERO);
 
             if (number == 0 || number == 1) return false;
 
