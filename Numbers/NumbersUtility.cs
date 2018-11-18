@@ -51,6 +51,33 @@ namespace Numbers
             return true;
         }
 
+        public long OrderByDigit(long number)
+        {
+            if (number < 0) throw new InvalidOperationException(Constants.EXCEPTION_MESSAGE_LESS_THAN_ZERO);
+
+            var numbers = number.ToString().ToList();
+
+            StringBuilder sb = new StringBuilder();
+
+            while (numbers.Count > 0)
+            {
+                char min = numbers[0];
+
+                foreach (var n in numbers)
+                {
+                    if (n.CompareTo(min) < 0)
+                    {
+                        min = n;
+                    }
+                }
+
+                sb.Append(min);
+                numbers.Remove(min);
+            }
+
+            return long.Parse(sb.ToString());
+        }
+
         public long OrderByDigitDescending(long number)
         {
             if (number < 0) throw new InvalidOperationException(Constants.EXCEPTION_MESSAGE_LESS_THAN_ZERO);

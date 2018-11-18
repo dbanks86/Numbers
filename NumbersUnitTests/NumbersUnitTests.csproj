@@ -54,6 +54,7 @@
     <Compile Include="FibonacciRecursionTests.cs" />
     <Compile Include="IsPrimeTests.cs" />
     <Compile Include="OrderByDigitDescendingTests.cs" />
+    <Compile Include="OrderByDigitTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
