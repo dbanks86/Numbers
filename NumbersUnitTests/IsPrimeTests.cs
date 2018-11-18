@@ -46,6 +46,32 @@ namespace NumbersUnitTests
         }
 
         [TestMethod]
+        public void IsPrime_2_ExpectTrue()
+        {
+            // Arrange
+            NumbersUtility numbersUtility = new NumbersUtility();
+
+            // Act
+            var result = numbersUtility.IsPrime(2);
+
+            // Assert
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod]
+        public void IsPrime_3_ExpectTrue()
+        {
+            // Arrange
+            NumbersUtility numbersUtility = new NumbersUtility();
+
+            // Act
+            var result = numbersUtility.IsPrime(3);
+
+            // Assert
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod]
         public void IsPrime_4_ExpectFalse()
         {
             // Arrange
@@ -59,13 +85,26 @@ namespace NumbersUnitTests
         }
 
         [TestMethod]
-        public void IsPrime_150_ExpectFalse()
+        public void IsPrime_5_ExpectTrue()
         {
             // Arrange
             NumbersUtility numbersUtility = new NumbersUtility();
 
             // Act
-            var result = numbersUtility.IsPrime(150);
+            var result = numbersUtility.IsPrime(5);
+
+            // Assert
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod]
+        public void IsPrime_6_ExpectFalse()
+        {
+            // Arrange
+            NumbersUtility numbersUtility = new NumbersUtility();
+
+            // Act
+            var result = numbersUtility.IsPrime(6);
 
             // Assert
             Assert.IsFalse(result);
@@ -82,6 +121,32 @@ namespace NumbersUnitTests
 
             // Assert
             Assert.IsTrue(result);
+        }
+
+        [TestMethod]
+        public void IsPrime_8_ExpectFalse()
+        {
+            // Arrange
+            NumbersUtility numbersUtility = new NumbersUtility();
+
+            // Act
+            var result = numbersUtility.IsPrime(8);
+
+            // Assert
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void IsPrime_150_ExpectFalse()
+        {
+            // Arrange
+            NumbersUtility numbersUtility = new NumbersUtility();
+
+            // Act
+            var result = numbersUtility.IsPrime(150);
+
+            // Assert
+            Assert.IsFalse(result);
         }
 
         [TestMethod]
