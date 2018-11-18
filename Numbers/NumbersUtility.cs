@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Text;
 
 namespace Numbers
 {
@@ -47,6 +49,33 @@ namespace Numbers
             }
 
             return true;
+        }
+
+        public long OrderByDigitDescending(long number)
+        {
+            if (number < 0) throw new InvalidOperationException(Constants.EXCEPTION_MESSAGE_LESS_THAN_ZERO);
+
+            var numbers = number.ToString().ToList();
+
+            StringBuilder sb = new StringBuilder();
+
+            while (numbers.Count > 0)
+            {
+                char max = numbers[0];
+
+                foreach (var n in numbers)
+                {
+                    if (n.CompareTo(max) > 0)
+                    {
+                        max = n;
+                    }
+                }
+
+                sb.Append(max);
+                numbers.Remove(max);
+            }
+
+            return long.Parse(sb.ToString());
         }
     }
 }
