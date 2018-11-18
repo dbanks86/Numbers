@@ -36,9 +36,7 @@ namespace Numbers
 
         public bool IsPrime(int number)
         {
-            if (number < 0) throw new InvalidOperationException(Constants.EXCEPTION_MESSAGE_LESS_THAN_ZERO);
-
-            if (number == 0 || number == 1) return false;
+            if (number < 2) return false;
 
             for (var i = 2; i <= number / 2; i++)
             {

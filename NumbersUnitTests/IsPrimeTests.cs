@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Numbers;
 
 namespace NumbersUnitTests
@@ -8,16 +7,16 @@ namespace NumbersUnitTests
     public class IsPrimeTests
     {
         [TestMethod]
-        public void IsPrime_Negative_ExpectInvalidOperationException()
+        public void IsPrime_NegativeNumber_False()
         {
             // Arrange
             NumbersUtility numbersUtility = new NumbersUtility();
 
             // Act
-            Action action = () => numbersUtility.IsPrime(-1);
+            var result = numbersUtility.IsPrime(-1);
 
             // Assert
-            Assert.ThrowsException<InvalidOperationException>(action);
+            Assert.IsFalse(result);
         }
 
         [TestMethod]
