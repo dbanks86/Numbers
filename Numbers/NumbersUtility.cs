@@ -51,6 +51,26 @@ namespace Numbers
             return true;
         }
 
+        public int GetFactorCount(int number)
+        {
+            if (number < 0) throw new InvalidOperationException(Constants.EXCEPTION_MESSAGE_LESS_THAN_ZERO);
+
+            if (number == 0) return 0;
+
+            // every number has at least 1 factor as itself
+            var factorCount = 1;
+
+            for (var i = 1; i <= number / 2; i++)
+            {
+                if (number % i == 0)
+                {
+                    factorCount++;
+                }
+            }
+
+            return factorCount;
+        }
+
         public long OrderByDigit(long number)
         {
             if (number < 0) throw new InvalidOperationException(Constants.EXCEPTION_MESSAGE_LESS_THAN_ZERO);

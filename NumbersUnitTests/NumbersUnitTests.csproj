@@ -55,6 +55,7 @@
     <Compile Include="IsPrimeTests.cs" />
     <Compile Include="OrderByDigitDescendingTests.cs" />
     <Compile Include="OrderByDigitTests.cs" />
+    <Compile Include="GetFactorCountTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
